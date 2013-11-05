@@ -1,0 +1,13 @@
+<div class ="container">
+  <h3>Edit note</h3>
+  
+  <form action="/notes/<%=@note.id%>" method="post">
+    <input type="hidden" name="_method" value="put">
+    <textarea name="body" name="body"><%=@note.body%></textarea>
+    <input type="submit" value="Edit">
+   
+  
+  </form>
+
+  <p><a href="/delete/<%= @note.id %>">Delete</a></p>
+</div>
